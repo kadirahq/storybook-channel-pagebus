@@ -2,4 +2,4 @@
 
 ### v1.0.0
 
-* Implement an API similar to an EventEmitter
+* Implement send and receive functions
