@@ -1,6 +1,12 @@
 import createBus from 'page-bus';
+import Channel from '@kadira/storybook-channel';
 
-export default class PageBusTransport {
+export default function createChannel({ key }) {
+  const transport = new PageBusTransport({ key });
+  return new Channel({ transport });
+}
+
+export class PageBusTransport {
   constructor({ key }) {
     this._bus = null;
     this._bus = createBus({ key });
